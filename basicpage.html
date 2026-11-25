@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fish</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <style>
+    /* ---------- Spacing controls (edit these) ---------- */
+    :root {
+      --page-padding: 16px 10px 0;   /* space inside the blue page */
+      --grid-gap: 24px 20px;         /* row gap, column gap between boxes */
+      --title-top: 0;                /* space above the Fish title box */
+      --left-text-top: 40px;         /* space above the left paragraph */
+      --text-line-height: 2;         /* space between lines of text */
+      --nav-padding: 18px 20px;      /* space inside the green nav bar */
+      --nav-gap: 14px;               /* space between nav pills */
+      --pill-padding: 8px 22px;      /* space inside each pill */
+		--left-text-top: 0;
+		
+    }
+
+    /* ---------- Base ---------- */
+    body {
+      margin: 0;
+      background: #2b2b2b;
+      font-family: "Courier New", monospace;
+    }
+
+    p {
+      color: #fff;
+      font-size: clamp(13px, 1.6vw, 12px);
+      line-height: var(--text-line-height);
+      margin: 0;
+    }
+
+    /* ---------- Page layout ---------- */
+    .page {
+      background: #4080e8;
+      width: 100%;
+      max-width: 810px;
+      min-height: 670px;
+      margin: 12px auto;
+      padding: var(--page-padding);
+      position: relative;
+      box-sizing: border-box;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--grid-gap);
+    }
+
+    /* ---------- Title box ---------- */
+    .title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 205px;
+      margin-top: var(--title-top);
+      background: #a6d8bd;
+      border: 2px solid #2aa0e8;
+      border-radius: 60px;
+    }
+
+    .title h1 {
+      margin: 0;
+      color: #111;
+      font: 400 clamp(36px, 8vw, 64px) "Century Gothic", "Futura", sans-serif;
+    }
+
+    /* ---------- Text and image ---------- */
+    .left {
+      align-self: start;
+      margin-top: var(--left-text-top);
+    }
+
+    .fish {
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      max-height: 236px;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 60px;
+      background: linear-gradient(135deg, #1f7fd8, #6fb7a0);
+    }
+
+    /* ---------- Navigation ---------- */
+    nav {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: #c4ecc6; 
+  border-top-left-radius: 40px;
+  padding: 18px 20px;
+  display: flex;
+  gap: 14px;
+}
+
+nav a {
+  background: #a6d8bd; 
+  color: #e8704f;
+  font-size: 24px;
+  text-decoration: underline;
+  padding: 6px 20px;
+  border-radius: 30px;
+ 
+}
+
+@media (max-width: 700px) {
+  nav {
+    left: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+    /* ---------- Small screens ---------- */
+    
+	 
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <div class="grid">
+      <div class="title">
+        <h1 class="anonymous-pro-bold">Fish</h1>
+      </div>
+
+      <p>
+        Fish are animals with backbones that live in water, including oceans, rivers, lakes, and streams. Most fish use gills to take oxygen from the water and fins to help them swim, steer, and stay balanced. They come in many shapes, sizes, and colors, from small, brightly colored fish to large sharks. Some species live in freshwater, while others live in saltwater, and certain species can move between both environments. Their varied bodies and adaptations allow them to survive in many different underwater habitats.
+      </p>
+
+      <p class="left">
+        Their diets also vary: some eat algae or other plant material, while others feed on insects, smaller fish, or other animals. Some fish live mostly alone, while others swim together in coordinated groups called schools. Schooling can make it harder for a predator to single out one fish and can help fish find food. From their feeding habits to their ways of moving and protecting themselves, fish show a remarkable variety of adaptations to underwater life.
+      </p>
+
+      <img class="fish" src="5633177254_9ec4fec5d9_q.jpg" alt="Orange fish near coral">
+    </div>
+
+    
+  </div>
+	<nav>
+  <a href="index.html" class="anonymous-pro-bold">Home</a>
+  <a href="JavaScript.html" class="anonymous-pro-bold">JavaScript</a>
+  <a href="video.html" class="anonymous-pro-bold">Video</a>
+  <a href="grid.html" class="anonymous-pro-bold">Grid layout</a>
+</nav>
+</body>
+</html>

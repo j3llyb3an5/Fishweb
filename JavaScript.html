@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript to Move Fish</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+     h1 {
+        
+        text-align: center;
+		 color: #363636
+    } p {
+        font: 14pt/1.4em ;
+        width: 768px;
+        margin: 24px auto;
+		color: #363636
+    }
+#move {
+    height: 250px;
+    aspect-ratio: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
+}
+	body {
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(to bottom, #c2efff, #0077be);
+}
+	nav {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: #c4ecc6; 
+  border-top-left-radius: 40px;
+  padding: 18px 20px;
+  display: flex;
+  gap: 14px;
+}
+
+nav a {
+  background: #a6d8bd; 
+  color: #e8704f;
+  font-size: 24px;
+  text-decoration: underline;
+  padding: 6px 20px;
+  border-radius: 30px;
+  
+}
+
+@media (max-width: 700px) {
+  nav {
+    left: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+</style>
+</head>
+
+<body>
+<h1 class="anonymous-pro-bold">Fish Follows Mouse</h1>
+<p class="anonymous-pro-regular">To move the fish, hover over it with the mouse.</p>
+	
+
+<img id="move" src="redfish.png" alt="Red fish">
+    
+<script>
+const move = document.getElementById("move");
+
+document.body.onpointermove = event => {
+    const { clientX, clientY } = event;
+
+    move.animate({
+        left: `${clientX}px`,
+        top: `${clientY}px`
+    
+    }, {duration: 1000, fill: "forwards"})
+
+}
+</script>    
+
+<nav>
+  <a href="index.html" class="anonymous-pro-bold">Home</a>
+  <a href="basicpage.html" class="anonymous-pro-bold">Basic Page</a>
+  <a href="video.html" class="anonymous-pro-bold">Video</a>
+  <a href="grid.html" class="anonymous-pro-bold">Grid layout</a>
+</nav>
+
+</body>
+</html>

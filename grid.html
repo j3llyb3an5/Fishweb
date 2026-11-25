@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Grid Layout</title>
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+	body { 
+		background:#3f84e5 ;
+	} #container {
+		width: 800px;
+		height: 800px;
+		background: white;
+		border: 1px solid dimgray;
+		margin: 24px auto;
+		display: grid;
+		grid-template: 400px 400px / 400px 400px;
+		
+	} #container div {
+		font: 72pt/1.4em Candara
+		
+	} #container div:nth-child(1) {
+    background: lightblue;
+}
+#container div:nth-child(2) {
+    background: lightgreen;
+	grid-area: 1/2/3;
+}
+#container div:nth-child(3) {
+    background: lavender;
+}
+#container div:nth-child(4) {
+    background: pink;
+	display: none;
+
+}
+	nav {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background: #c4ecc6; 
+  border-top-left-radius: 40px;
+  padding: 18px 20px;
+  display: flex;
+  gap: 14px;
+}
+
+nav a {
+  background: #a6d8bd; 
+  color: #e8704f;
+  font-size: 24px;
+  text-decoration: underline;
+  padding: 6px 20px;
+  border-radius: 30px;
+ 
+}
+
+@media (max-width: 700px) {
+  nav {
+    left: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+	
+	</style>
+</head>
+
+<body>
+<div id="container">
+		<div><img  src="tinyfish.jpg" width= "400" height= "400" /></div>
+		<div><img src="fih.jpg" width="400" height="800" /></div>
+		<div><img src="fishes.jpg" width="400" height="400" /></div>
+	</div>
+	<nav>
+  <a href="index.html" class="anonymous-pro-bold">Home</a>
+  <a href="basicpage.html" class="anonymous-pro-bold">Basic Page</a>
+  <a href="video.html" class="anonymous-pro-bold">Video</a>
+  <a href="JavaScript.html" class="anonymous-pro-bold">JavaScript</a>
+</nav>
+</body>
+</html>
